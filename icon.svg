@@ -1,0 +1,10 @@
+<svg width="128" height="128" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="128" height="128" rx="24" fill="#28A745"/>
+  <!-- Download Arrow -->
+  <path d="M64 28v40m0 0l-14-14m14 14l14-14M40 84h48" 
+        stroke="white" 
+        stroke-width="14" 
+        stroke-linecap="round" 
+        stroke-linejoin="round"/>
+</svg> 
