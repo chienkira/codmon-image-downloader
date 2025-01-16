@@ -1,26 +1,6 @@
 // Store processed images to avoid duplicate processing
 const processedImages = new WeakSet();
 
-// Show notification message
-function showNotification(message) {
-  const notification = document.createElement('div');
-  notification.className = 'codmon-notification';
-  notification.textContent = message;
-  document.body.appendChild(notification);
-
-  // Remove notification after animation ends
-  notification.addEventListener('animationend', () => {
-    document.body.removeChild(notification);
-  });
-}
-
-// Listen for messages from background script
-chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
-  if (request.action === 'downloadStarted') {
-    showNotification(`Downloading: ${request.filename}`);
-  }
-});
-
 function addDownloadButton(imgElement) {
   // Skip if image is already processed
   if (processedImages.has(imgElement)) {
@@ -52,6 +32,9 @@ function addDownloadButton(imgElement) {
     const downloadUrl = originalUrl.toString();
     const fileName = downloadUrl.split('/').pop().split('?')[0];
 
+    // Show notification immediately
+    showNotification(`Downloading: ${fileName}`);
+    
     chrome.runtime.sendMessage({
       action: 'downloadImage',
       url: downloadUrl,
@@ -112,3 +95,16 @@ observer.observe(document.body, {
 // Process images when page loads
 window.addEventListener('load', processImages);
 processImages();
+
+// Show notification message
+function showNotification(message) {
+  const notification = document.createElement('div');
+  notification.className = 'codmon-notification';
+  notification.textContent = message;
+  document.body.appendChild(notification);
+
+  // Remove notification after animation ends
+  notification.addEventListener('animationend', () => {
+    document.body.removeChild(notification);
+  });
+}
