@@ -12,7 +12,7 @@ Features:
 - No data collection or tracking
 
 How to use:
-1. Install the extension
+1. Install the extension. [Chrome web extension store](https://chromewebstore.google.com/detail/%E3%82%B3%E3%83%89%E3%83%A2%E3%83%B3-image-downloader/lgcbfgknggkknpcppepdgnnfanhddhgm?hl=en&authuser=0)
 2. Visit parents.codmon.com
 3. Click the download button to save the high-quality image
 
