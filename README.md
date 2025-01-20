@@ -2,7 +2,7 @@
 
 # Codmon Image Downloader
 
-Want to download high quality image on Codmon - ドコモン? Use this extension!
+Want to download high quality images on Codmon - コドモン? Use this extension!
 
 Features:
 - Automatically adds download buttons to all images from image.codmon.com
