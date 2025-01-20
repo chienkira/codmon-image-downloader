@@ -2,7 +2,7 @@
 
 # Codmon Image Downloader
 
-A simple extension that adds download buttons to images on parents.codmon.com.
+Want to download high quality image on Codmon - ドコモン? Use this extension!
 
 Features:
 - Automatically adds download buttons to all images from image.codmon.com
